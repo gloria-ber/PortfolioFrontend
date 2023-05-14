@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Poppins", Helvetica, sans-serif;
+    
+}
+
+/* Barra de navegación */
+.bg-navegacion, .footer {
+    background-color: #eeeeee;
+}
+
+
+.fa-linkedin:hover {
+    color: #0e76a8 !important;
+}
+
+.fa-github:hover {    
+    color: #7E37B7 !important;
+}
+
+.fa-square-instagram:hover {  
+    color: #C13584;  /* Fallback other browsers */
+    background: -webkit-linear-gradient(100deg,#fdf497, #fd5949, #d6249f, #285AEB);
+    background-clip: text;    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Banner */
+section .banner {
+    background-image: url('../src/assets/img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    font-size: 0.5em;
+    text-align: center;
+    padding: 6em;
+    
+}
+
+/* Presentación */
+.perfil {
+    border-radius: 50%;
+    width: 100%;
+    min-width: 175px;
+    
+    
+}
+.presentacion p {
+    font-size: 1.2em;
+    color: #263238;
+    padding-left: 15%;
+}
+
+.experiencia img {
+    min-width: 100px;
+}
+
+.educacion img {
+    min-width: 100px;
+}
+
+.proyecto:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);    
+    scale: 102%;
+    transition: 500ms;
+}
+
+/*
+.login, .registro {
+    height: 70vh;
+    margin-top: 5%;
+
+}
+
+.barra-menu {
+    height: 80vh;        
+
+}
+
+.menu {
+    min-width: 125px;
+    padding-bottom: 5%;
+
+}*/
