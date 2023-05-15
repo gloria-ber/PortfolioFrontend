@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/services/persona.service';
+
 
 @Component({
   selector: 'app-banner',
@@ -7,13 +9,12 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) {}
+  persona: Persona = new Persona("","","");
+  constructor(public personaService: PersonaService){}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.miPortfolio = data;
-    } );
-  }
+    this.personaService.getPersona().subscribe(data => {
+      this.persona = data})
+    }
+ 
 }
