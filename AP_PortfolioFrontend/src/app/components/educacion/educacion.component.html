@@ -5,72 +5,22 @@
         <h2>Educación</h2>
       </div>
 
-      <div class="row estudio1 p-3">
+      <div class="row estudio1 p-3" *ngFor="let educacion of educaciones">
         <div class="col-sm-12 col-md-2 col-lg-2">
           <img
-            src="./assets/img/congreso.png"
+            [src]="educacion.imagenInst"
             class="img-fluid w-75 pb-3"
-            alt="logo Universidad de Congreso"
+            [alt]="educacion.institucion"
           />
         </div>
 
         <div class="col-sm-12 col-md-10 col-lg-10 px-3">
           <h4 class="card-title">
-            Licenciatura en Administración | Universidad de Congreso
+            {{educacion.titulo}} | {{educacion.institucion}}
           </h4>
-          <h5 class="card-subtitle">Fecha de Egreso: 2022</h5>
+          <h5 class="card-subtitle">Fecha de Egreso: {{educacion.fechaEgreso}}</h5>
         </div>
       </div>
 
-      <div class="row curso1 p-3">
-        <div class="col-sm-12 col-md-2 col-lg-2">
-          <img
-            src="./assets/img/utn.png"
-            class="img-fluid w-50 pb-3"
-            alt="logo Universidad Tecnológica Nacional"
-          />
-        </div>
-
-        <div class="col-sm-12 col-md-10 col-lg-10 px-3">
-          <h4 class="card-title">
-            Diplomatura en Desarrollo Web | Universidad Tecnológica Nacional
-          </h4>
-          <h5 class="card-subtitle">2021 | Carga horaria: 100 horas</h5>
-        </div>
-      </div>
-
-      <div class="row curso2 p-3">
-        <div class="col-sm-12 col-md-2 col-lg-2">
-          <img
-            src="./assets/img/utn.png"
-            class="img-fluid w-50 pb-3"
-            alt="logo Universidad Tecnológica Nacional"
-          />
-        </div>
-
-        <div class="col-sm-12 col-md-10 col-lg-10 px-3">
-          <h4 class="card-title">
-            Introducción a la Programación | Universidad Tecnológica Nacional
-          </h4>
-          <h5 class="card-subtitle">2020 | Carga horaria: 60 horas</h5>
-        </div>
-      </div>
-
-      <div class="row estudio2 p-3">
-        <div class="col-sm-12 col-md-2 col-lg-2">
-          <img
-            src="./assets/img/mariano.png"
-            class="img-fluid w-50 pb-3"
-            alt="logo Instituto Mariano Moreno"
-          />
-        </div>
-
-        <div class="col-sm-12 col-md-10 col-lg-10 px-3">
-          <h4 class="card-title">
-            Tecnicatura en Diseño Gráfico | Instituto Mariano Moreno
-          </h4>
-          <h5 class="card-subtitle">Fecha de Egreso: 1997</h5>
-        </div>
-      </div>
     </div>
   </section>

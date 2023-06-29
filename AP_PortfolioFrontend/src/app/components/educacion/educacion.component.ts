@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Educacion } from 'src/app/model/educacion.model';
+import { EducacionService } from 'src/app/services/educacion.service';
 
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
-export class EducacionComponent {
 
+export class EducacionComponent implements OnInit {
+  educaciones: Educacion[]=[];//llamo al array de experienciaService
+
+  constructor(private educacionService: EducacionService){}
+
+  ngOnInit(): void {
+    this.cargarEducacion();
+  }
+
+  cargarEducacion(): void {
+    this.educacionService.lista().subscribe(data => {this.educaciones=data});
+  }
 }

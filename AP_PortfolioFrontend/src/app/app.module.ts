@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { PresentacionComponent } from './components/presentacion/presentacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
@@ -17,8 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    BannerComponent,
+    HeaderComponent,    
     PresentacionComponent,
     ExperienciaComponent,
     EducacionComponent,
@@ -31,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [PersonaService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

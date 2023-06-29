@@ -1,6 +1,12 @@
 <!-- Presentación -->
-<section class="container presentacion mt-5">
-    <div class="row">
+<section class="presentacion" *ngFor="let persona of personas">
+  <div class="banner text-white">
+    <h1 class="mt-5 pt-5">{{persona.nombre}} {{persona.apellido}}</h1>
+    <h4>{{persona.descripcion}}</h4>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row mt-5">
       <div class="col-sm-12 col-md-2 col-lg-2 text-center">
         <img
           src="/assets/img/foto_cv.png"
@@ -10,13 +16,9 @@
       </div>
       <div class="col-sm-12 col-md-10 col-lg-10 text-align-left">
         <p class="pt-4">
-          Soy una persona con diversos intereses, me gusta adquirir nuevas habilidades
-          constantemente. Inicié mi formación académica en diseño gráfico y
-          fotografía. Luego estudié administración de empresas y en este
-          momento me estoy adentrando en el mundo del desarrollo web. Siento
-          que cada experiencia suma y le agrega versatilidad a mi perfil
-          profesional.
+          {{persona.presentacion}}
         </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>

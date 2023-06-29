@@ -5,69 +5,24 @@
         <h2>Experiencia</h2>
       </div>
 
-      <div class="row empleo1 p-3">
+      <div class="row p-3" *ngFor="let experiencia of experiencias">
         <div class="col-sm-12 col-md-2 col-lg-2">
           <img
-            src="./assets/img/grupar.png"
+          [src]="experiencia.imagenEmpresa"
             class="img-fluid pt-3"
-            alt="logo de Tarjeta Grupar S.A."
+            [alt]="experiencia.empresa"
           />
         </div>
 
         <div class="col-sm-12 col-md-10 col-lg-10 px-3">
-          <h3 class="card-title py-4">Tarjeta Grupar S.A.</h3>
-          <h4 class="card-subtitle">Marzo 2016 - Abril 2023</h4>
+          <h3 class="card-title py-4">{{experiencia.empresa}}</h3>
+          <h4 class="card-subtitle">{{experiencia.fechaInicio}} - {{experiencia.fechaFin}}</h4>
           <p class="card-body descripcion">
-            Me desempeñé como Responsable de Operaciones, siendo mis
-            responsabilidades la coordinación y control de tareas, la
-            logística de impresión y distribución de resúmenes y tarjetas de
-            crédito, la elaboración de informes para gerencia y el diseño y
-            comunicación en redes sociales.
-          </p>
-          <h4 class="card-subtitle">Diciembre 2013 - Febrero 2016</h4>
-          <p class="descripcion card-body">
-            Me desempeñé como Analista de Operaciones, siendo responsable de
-            la gestión y resolución de reclamos de clientes y comercios
-            adheridos, ajustes y controles de cuentas y el análisis, la
-            gestión de resúmenes, el desarrollo y la formalización de
-            procesos.
-          </p>
+           {{experiencia.tareas}}
+          </p>         
         </div>
       </div>
 
-      <div class="row empleo2 p-3">
-        <div class="col-sm-12 col-md-2 col-lg-2">
-          <img
-            src="./assets/img/ccc-lcp.png"
-            class="img-fluid pt-3"
-            alt="logo de CCC La Capital del Plata Ltda."
-          />
-        </div>
-
-        <div class="col-sm-12 col-md-10 col-lg-10 px-3">
-          <h3 class="card-title py-4">CCC La Capital del Plata Ltda.</h3>
-          <h4 class="card-subtitle">Marzo 2008 - Octubre 2013</h4>
-          <p class="card-body">
-            Me desempeñé como Analista de Riesgo, siendo mis responsabilidades
-            el análisis de clientes para determinar la viabilidad de
-            otorgamiento de tarjeta de crédito y préstamo, de acuerdo con
-            políticas de la empresa y regulaciones del BCRA. También elaboré
-            informes para la gerencia.
-          </p>
-
-          <div>
-            <h4 class="card-subtitle">Marzo 2006 - Febrero 2008</h4>
-            <p class="card-body">
-              Me desempeñé como Data Entry, estando a mi cargo el ingreso y
-              actualización de datos en sistema de cliente único, el control
-              de la documentación y la integridad de los legajos. A su vez
-              realicé tareas administrativas y atención al cliente interno.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
 
     </div>
   </section>
